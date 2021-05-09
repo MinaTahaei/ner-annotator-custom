@@ -50,9 +50,8 @@ export default {
     };
   },
   mounted(){
-    let array = ["Name","Email","mobile_number","Landline","Gender","personal_summary",
-    "Birth_Date","City","Address","Skills","institute_name","degree","education_start_year",
-    "education_end_year","education_summary","work_organization","Position","work_start_year","work_end_year","work_summary","Certificates","english_skill_level"];
+    let array = ["Name","Email","mobile_number","Landline","Gender",
+    "Date","City","Address","Skills","institute_name","degree","major","work_organization","Position","Certificates","english_skill_level"];
     for(let i = 0 ; i<array.length ; i++)
       this.$store.commit("addClass",array[i])
   },
