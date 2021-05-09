@@ -54,6 +54,18 @@ class TokenManager {
         newTokens.push(t);
       }
     }
+    
+    // Case if the selected tokens are at the end of the text and have not been added to the newTokens
+    if (selectedTokens.length) {
+      newTokens.push({
+        type: "token-block",
+        start: selectedTokens[0].start,
+        end: selectedTokens[selectedTokens.length - 1].end,
+        tokens: selectedTokens,
+        label: _class && _class.name ? _class.name : "Unlabelled",
+        classId: _class && _class.id ? _class.id : 0,
+    });
+  }
     this.tokens = newTokens;
   }
 
