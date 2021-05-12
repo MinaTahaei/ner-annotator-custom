@@ -9,7 +9,7 @@
         >
           {{ cl.name }}
         </a>
-        <a class="tag is-medium is-delete" @click="removeClass(cl.id)"></a>
+        <!-- <a class="tag is-medium is-delete" @click="removeClass(cl.id)"></a> -->
       </div>
     </div>
 
@@ -26,7 +26,7 @@
       </button>
     </p>
 
-    <p class="control">
+    <!-- <p class="control">
       <button
         class="button is-primary"
         @click="showNewClassInput = true"
@@ -35,7 +35,7 @@
           <font-awesome-icon class="fa-lg" icon="plus-square" />
         </span>
       </button>
-    </p>
+    </p> -->
   </div>
 </template>
 
@@ -51,7 +51,7 @@ export default {
   },
   mounted(){
     let array = ["Name","Email","mobile_number","Landline","Gender",
-    "Date","City","Address","Skills","institute_name","degree","major","work_organization","Position","Certificates","english_skill_level"];
+    "Date","City","Address","Skills","institute_name","degree","major","work_organization","Position","Certificates","english_skill_level","marital_status"];
     for(let i = 0 ; i<array.length ; i++)
       this.$store.commit("addClass",array[i])
   },
